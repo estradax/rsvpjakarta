@@ -1,10 +1,6 @@
+import Navigation from "@/components/Navigation";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Navigation from "@/components/Navigation";
-import styles from "./page.module.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,11 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className={styles.container}>
-          <Navigation>
-            {children}
-          </Navigation>
+      <body className="text-white">
+        <div className="w-screen h-screen bg-black">
+          <Navigation /> 
+          <div>{children}</div>
         </div>
       </body>
     </html>

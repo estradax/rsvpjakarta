@@ -6,10 +6,10 @@ export default function Home() {
     <main className={styles.main}>
       <div className="flex mt-5 ">
         <h1 className='w-100 font-bold text-5xl uppercase mx-auto text-center tracking-widest leading-tight'>
-          <div className='relative'>
+          <div>
             <h3 className='pt-2'>Welcome to <span className='text-red-400'>R.S.V.P. JAKARTA</span></h3>
           </div>
-          <div className='relative'>
+          <div>
             <h3 className='pt-2'>Your Boutique PR & Communications Agency</h3>
           </div>
         </h1>
