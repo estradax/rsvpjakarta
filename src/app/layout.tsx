@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="text-white">
-        <div className="w-screen h-screen bg-black">
+        <div className="bg-black">
           <Navigation /> 
           <div>{children}</div>
         </div>

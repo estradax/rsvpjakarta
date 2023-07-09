@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 #flip {
-  height:70px;
+  height:75px;
   overflow:hidden;
 }
 
-#flip > div > h3 {
+#flip > div > div {
   color:#fff;
-  padding:4px 12px;
-  height:60px;
-  margin-bottom:35px;
+  padding:2px 12px;
+  height:70px;
+  margin-bottom:28px;
   display:inline-block;
 }
 
@@ -19,19 +19,23 @@
   animation: show 5s linear infinite;
 }
 
-#flip div h3 {
+#flip div div {
   background:#42c58a;
 }
-#flip div:last-child h3 {
+#flip div:last-child div {
   background:#4ec7f3;
 }
 
 @keyframes show {
-  0% {margin-top:-270px;}
-  33% {margin-top:-180px;}
+  0% {margin-top:-180px;}
+  5% {margin-top:-90px;}
+  33% {margin-top:-90px;}
   38% {margin-top:-90px;}
-  66% {margin-top:-90px;}
+  56% {margin-top:-90px;}
   71% {margin-top:0px;}
-  99.99% {margin-top:0px;}
-  100% {margin-top:-270px;}
+  90% {margin-top:0px;}
+  95% {margin-top:30px}
+  99.99% {margin-top:60px;}
+  100% {margin-top:-180px;}
 }
+
