@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Layout({ children } : { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,10 +21,25 @@ export default function Layout({ children } : { children: React.ReactNode }) {
         </div>	
 				<div className="w-full h-full row-[2_/_5] col-span-8">
 					<ul className="w-full h-full flex flex-col items-strecth justify-center text-center">
-						<li className="py-2 border-t border-gray-700 text-[72px]">Menu</li>
-						<li className="py-2 border-t border-gray-700 text-[72px]">Menu</li>
-						<li className="py-2 border-y border-gray-700 text-[72px]">Menu</li>
+						<li className="grid grid-cols-8 py-2 border-t border-gray-700 transition hover:bg-red-400">
+							<span className="col-[3] text-[72px]">Art</span>
+							<span className="col-[5_/_span_2] flex items-center text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta dictum orci ac gravida. Aliquam vel fringilla risus. Duis vel urna non leo sodales pulvinar eu sit amet orci. Praesent quam libero, iaculis vitae vestibulum vel, vulputate a erat.</span>
+						</li>
+						<li className="grid grid-cols-8 py-2 border-t border-gray-700 transition hover:bg-red-400">
+							<span className="col-[2_/_span_3] flex items-center text-justify">Praesent laoreet venenatis purus, et congue mauris luctus vitae. Nulla eget commodo nunc, vitae lacinia felis. Nunc faucibus placerat diam vitae auctor. Duis eleifend malesuada nisl. Quisque dapibus elit quis nisl convallis, eget tristique metus porttitor. Aenean quis dolor sed velit vulputate ornare eu nec ipsum. Aliquam erat volutpat.</span>
+							<span className="col-[6] text-[72px]">Work</span>
+						</li>
+						<li className="grid grid-cols-8 py-2 border-y border-gray-700 transition hover:bg-red-400">
+							<span className="col-[4] text-[72px]">Contact</span>
+							<span className="col-[6_/_span_2] flex items-center text-justify">Aliquam vel fringilla risus. Duis vel urna non leo sodales pulvinar eu sit amet orci. Praesent quam libero, iaculis vitae vestibulum vel, vulputate a erat.</span>
+						</li>
 					</ul>
+				</div>
+				<div className="row-[5] col-span-2 flex items-center ml-16">
+					<div className="h-full mr-8">
+						<Image className="h-full w-full object-cover rounded-3xl" src="/an-art.jpg" width={360} height={360} alt="" />
+					</div>
+					<span className="text-xs text-justify">Aliquam vel fringilla risus. Duis vel urna non leo sodales pulvinar eu sit amet orci.</span>
 				</div>
 			</nav>
 
@@ -38,8 +54,7 @@ export default function Layout({ children } : { children: React.ReactNode }) {
         <header className="col-span-3 p-2">
           <span className="text-[42px]">RSVP Jakarta</span>
         </header>
-        <div className="col-[8] flex justify-end items-center mr-2">
-          <button onClick={() => setIsOpen(true)}>
+        <button onClick={() => setIsOpen(true)} className="col-[8] flex justify-end items-center transition hover:bg-red-400">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -54,8 +69,7 @@ export default function Layout({ children } : { children: React.ReactNode }) {
                 d="M3.75 9h16.5m-16.5 6.75h16.5"
               />
             </svg>
-          </button>
-        </div>
+        </button>
 				<div className="col-span-8 row-span-5">
 					{children}
 				</div>
