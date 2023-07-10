@@ -1,6 +1,13 @@
 import Navigation from "@/components/Navigation";
 import "./globals.css";
 import type { Metadata } from "next";
+import { Anek_Malayalam } from "next/font/google";
+
+const anek_malayalam = Anek_Malayalam({
+	subsets: ['latin'],
+	display: 'swap',
+	variable: '--font-anek-malayalam'
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={anek_malayalam.variable}>
       <body className="text-white overflow-x-hidden">
         {children} 
       </body>
